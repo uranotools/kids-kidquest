@@ -1,0 +1,20 @@
+{
+  "dataset": "fixtures/",
+  "disclaimer": "Aventura sintética. No es material escolar certificado.",
+  "design": "1 topología (8 nodos). 4 mundos (bosque, carros, peces, espacio). 8 quizzes por partida (tema del adulto + fill_quizzes).",
+  "quests": [
+    {
+      "id": "bosque-estrellas",
+      "file": "quests/bosque-estrellas.json",
+      "start": "claro",
+      "goal": "cima",
+      "worlds": ["bosque-estrellas", "circuito-carros", "arrecife-peces", "orbitas-espacio"],
+      "quizSlots": ["al-rio", "al-sendero", "cruzar", "a-cueva", "salir-cima", "a-pradera", "pradera-mirador", "a-cima"]
+    }
+  ],
+  "notes": [
+    "Modo juego: el agente no lee ni suelta este archivo.",
+    "start_quest({ tema, mundo }) + fill_quizzes. El recap es lo preguntado en esa partida.",
+    "urano-launch debe copiar fixtures/ entero."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "urano-kidquest",
+  "version": "1.0.0",
+  "description": "Aventura por turnos para niños (6–10): mapa en una MultiverseTab y tarjetas JsonLive en el chat",
+  "main": "dist/config.js",
+  "scripts": {
+    "build:ui": "node ./scripts/build-ui.js",
+    "build:ui:watch": "node ./scripts/build-ui.js --watch",
+    "deploy": "npm run build:ui && npx esbuild config.ts Plugins/**/*.ts --bundle --platform=node --outdir=dist --format=cjs --external:@core/* --external:@core/runtime/SessionContext --external:@models/* --external:@modules/* --external:electron && node ./scripts/stage-dist.js",
+    "build": "npm install && npm run deploy",
+    "urano-launch": "node ./scripts/pack.js",
+    "pack": "npm run deploy && npm run urano-launch"
+  },
+  "keywords": ["urano", "mcp", "kids", "quest", "adventure"],
+  "author": "Urano AI",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.3.3"
+  },
+  "engines": { "node": ">=18.0.0" }
+}

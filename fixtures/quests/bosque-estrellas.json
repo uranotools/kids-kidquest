@@ -1,0 +1,191 @@
+{
+  "id": "bosque-estrellas",
+  "title": "El Bosque de las Estrellas",
+  "disclaimer": "Juego de aula. Un adulto cerca está bien. No es clase oficial.",
+  "start": "claro",
+  "goal": "cima",
+  "nodes": {
+    "claro": {
+      "id": "claro",
+      "title": "El claro",
+      "emoji": "🌲",
+      "x": 12,
+      "y": 72,
+      "scene": "Un claro con luz suave. El búho Luna parpadea y te saluda.",
+      "stamp": "búho",
+      "choices": [
+        {
+          "id": "al-rio",
+          "label": "Ir al río",
+          "to": "rio",
+          "quiz": {
+            "q": "¿Cuánto es 1 + 1?",
+            "options": ["1", "2", "3"],
+            "answer": "2",
+            "hint": "Un dedito y otro."
+          }
+        },
+        {
+          "id": "al-sendero",
+          "label": "Sendero oscuro",
+          "to": "sendero",
+          "quiz": {
+            "q": "¿Cuántas patas tiene un búho?",
+            "options": ["2", "4", "6"],
+            "answer": "2",
+            "hint": "Los búhos son aves. Las aves tienen…"
+          }
+        }
+      ]
+    },
+    "rio": {
+      "id": "rio",
+      "title": "El río",
+      "emoji": "🌊",
+      "x": 38,
+      "y": 58,
+      "scene": "El agua canta. Una nutria señala tres piedras para cruzar.",
+      "stamp": "nutria",
+      "choices": [
+        { "id": "volver-claro", "label": "Volver al claro", "to": "claro" },
+        {
+          "id": "cruzar",
+          "label": "Cruzar las piedras",
+          "to": "puente",
+          "quiz": {
+            "q": "¿Cuánto es 2 + 2?",
+            "options": ["3", "4", "5"],
+            "answer": "4",
+            "hint": "Dos piedras y dos piedras más."
+          }
+        }
+      ]
+    },
+    "sendero": {
+      "id": "sendero",
+      "title": "Sendero de musgo",
+      "emoji": "🍄",
+      "x": 28,
+      "y": 38,
+      "scene": "Honguitos brillan. Un mapache esconde una linterna.",
+      "stamp": "mapache",
+      "choices": [
+        {
+          "id": "a-cueva",
+          "label": "Entrar a la cueva",
+          "to": "cueva",
+          "quiz": {
+            "q": "¿Cuántas patas tiene un perro?",
+            "options": ["2", "4", "6"],
+            "answer": "4",
+            "hint": "Las mascotas andan en cuatro."
+          }
+        },
+        { "id": "sendero-claro", "label": "Volver al claro", "to": "claro" }
+      ]
+    },
+    "puente": {
+      "id": "puente",
+      "title": "Puente de cuerda",
+      "emoji": "🌉",
+      "x": 58,
+      "y": 48,
+      "scene": "El puente se mueve un poquito. Al otro lado hay un farol.",
+      "stamp": "farol",
+      "choices": [
+        {
+          "id": "a-pradera",
+          "label": "Ir a la pradera",
+          "to": "pradera",
+          "quiz": {
+            "q": "¿De qué color es la hierba?",
+            "options": ["Roja", "Verde", "Azul"],
+            "answer": "Verde",
+            "hint": "El césped del parque."
+          }
+        },
+        { "id": "puente-rio", "label": "Bajar al río", "to": "rio" }
+      ]
+    },
+    "cueva": {
+      "id": "cueva",
+      "title": "Cueva de eco",
+      "emoji": "🦇",
+      "x": 42,
+      "y": 22,
+      "scene": "Eco, eco… Un murciélago pregunta el color del cielo de día.",
+      "stamp": "murciélago",
+      "choices": [
+        {
+          "id": "salir-cima",
+          "label": "Salir hacia la cima",
+          "to": "mirador",
+          "quiz": {
+            "q": "¿De qué color es el cielo de día?",
+            "options": ["Azul", "Verde", "Naranja"],
+            "answer": "Azul",
+            "hint": "Cuando no hay atardecer, el cielo se ve…"
+          }
+        },
+        { "id": "cueva-sendero", "label": "Volver al sendero", "to": "sendero" }
+      ]
+    },
+    "pradera": {
+      "id": "pradera",
+      "title": "Pradera de luciérnagas",
+      "emoji": "✨",
+      "x": 74,
+      "y": 36,
+      "scene": "Luces diminutas bailan. Una estrella cae despacio.",
+      "stamp": "luciérnaga",
+      "choices": [
+        {
+          "id": "pradera-mirador",
+          "label": "Subir al mirador",
+          "to": "mirador",
+          "quiz": {
+            "q": "¿Qué letra va después de la A?",
+            "options": ["B", "Z", "M"],
+            "answer": "B",
+            "hint": "A, B, C…"
+          }
+        },
+        { "id": "pradera-puente", "label": "Volver al puente", "to": "puente" }
+      ]
+    },
+    "mirador": {
+      "id": "mirador",
+      "title": "Mirador",
+      "emoji": "🔭",
+      "x": 62,
+      "y": 16,
+      "scene": "Se ve todo el bosque. Falta un paso para la cima.",
+      "stamp": "telescopio",
+      "choices": [
+        {
+          "id": "a-cima",
+          "label": "Camino a la cima",
+          "to": "cima",
+          "quiz": {
+            "q": "¿Qué sale de noche y brilla en el cielo?",
+            "options": ["Estrellas", "Manzanas", "Sillas"],
+            "answer": "Estrellas",
+            "hint": "El nombre de este bosque te lo dice."
+          }
+        },
+        { "id": "mirador-pradera", "label": "Bajar a la pradera", "to": "pradera" }
+      ]
+    },
+    "cima": {
+      "id": "cima",
+      "title": "Cima de las estrellas",
+      "emoji": "🌟",
+      "x": 86,
+      "y": 10,
+      "scene": "¡Llegaste! El cielo se llena de estrellas y Luna aplaude.",
+      "stamp": "estrella",
+      "goal": true,
+      "choices": [{ "id": "otra-vez", "label": "Jugar otra vez", "to": "claro", "reset": true }]
+    }
+  }
+}
