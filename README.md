@@ -53,6 +53,11 @@ Al llegar a la meta: “Hoy aprendió” para el adulto
 4. Mientras el guía habla, los botones se **bloquean** (el mapa late y dice “El guía te está hablando…”). Cuando aparece la tarjeta, puede elegir otra vez. Si se traba, a los ~8 s el adulto puede pulsar **Ya leí el chat**.
 5. En la cima (o con `/estrellas`) sale un recuento: tema, mundo, aciertos y cada pregunta.
 
+<div align="center">
+<img src="assets/finalresult.png" alt="Tarjeta Hoy aprendió: tema verbos, mundo arrecife, 4 de 4 preguntas" width="640" />
+<p><strong>Hoy aprendió</strong> — el adulto ve el tema, el mundo y cada pregunta de esa partida.<br/>Es lo que se preguntó en el juego, no un informe escolar.</p>
+</div>
+
 Comandos en el chat: `/mapa` · `/estrellas`.
 
 ---
@@ -166,7 +171,7 @@ Node ≥ 18. El plugin no tiene dependencias de runtime propias: React llega por
 ```text
 urano-kidquest/
   README.md
-  assets/                  ← capturas (peces + verbos, bosque + notas)
+  assets/                  ← capturas (mundos + «Hoy aprendió»)
   SKILL.md                 ← instrucciones del guía
   fixtures/quests/         ← grafo (bosque-estrellas.json)
   Plugins/Quest/           ← motor, mundos, banco de quizzes
